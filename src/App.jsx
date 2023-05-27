@@ -5,16 +5,24 @@ import Blogs from "./pages/Blogs";
 import SinglePost from "./pages/SinglePost";
 import Error from "./pages/Error";
 import Team from "./pages/Team";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <div className='App'>
-      <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='/team' element={<Team />} />
-        <Route path='/blogs/:id' element={<SinglePost />} />
-        <Route path='*' element={<Error />} />
-      </Routes>
+      <Header />
+      <div className='flex'>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/team' element={<Team />} />
+          <Route path='/blogs/:id' element={<SinglePost />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+        <div>
+          <Sidebar />
+        </div>
+      </div>
     </div>
   );
 }
