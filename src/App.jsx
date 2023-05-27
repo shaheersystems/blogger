@@ -8,6 +8,7 @@ import Team from "./pages/Team";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
 function App() {
   const location = useLocation();
   return (
@@ -29,6 +30,7 @@ function App() {
           ""
         )}
       </div>
+      <Footer />
     </div>
   );
 }
